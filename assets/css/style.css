@@ -1,0 +1,181 @@
+body {
+    background-color: #e0e0e0;
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+abbr {
+    position: relative;
+    cursor: pointer;
+    color: #00bcd4;
+    transition: color 0.3s ease;
+}
+
+abbr:hover {
+    color: #0097a7;
+    text-decoration: underline;
+}
+
+abbr:hover::after {
+    position: absolute;
+    left: 120%;
+    top: 300%;
+    transform: translateY(-50%);
+    padding: 12px;
+    background: #000;
+    color: #fff;
+    content: attr(title);
+    width: 220px;
+    border-radius: 10px;
+    font-size: 14px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+abbr:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+.icon {
+    color: #ff4081;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.icon:hover {
+    color: #c51162;
+    transform: rotate(20deg);
+}
+
+.card-header {
+    background-color: #ff5722;
+    padding: 20px;
+    text-transform: uppercase;
+    font-weight: 900;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    margin-bottom: 25px;
+    color: #fff;
+    transition: background-color 0.3s ease;
+}
+
+.card-header:hover {
+    background-color: #e64a19;
+}
+
+.f-bold {
+    font-weight: 900;
+}
+
+.box {
+    padding-bottom: 500px;
+}
+
+#progress, #creator {
+    border: none;
+    border-radius: 50%;
+    background: linear-gradient(45deg, #3f51b5, #2196f3);
+    color: #fff;
+    padding: 14px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+#progress:hover, #creator:hover {
+    background: linear-gradient(45deg, #303f9f, #1976d2);
+    transform: scale(1.1);
+}
+
+.dot {
+    height: 80px;
+    width: 80px;
+    background-color: #cfd8dc;
+    border-radius: 50%;
+    display: inline-block;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.dot:hover {
+    background-color: #b0bec5;
+}
+
+.App {
+    text-align: center;
+    color: #333;
+}
+
+.flex-wrap{
+    background-color: #647c6960;
+    border-radius: 10px;
+}
+
+.circular-progress {
+    position: relative;
+    height: 60px;
+    width: 60px;
+    margin: 15px;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    cursor: pointer;
+    background: conic-gradient(#e91e63 0%, #9c27b0 100%);
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.circular-progress:hover {
+    background: conic-gradient(#f06292 0%, #ba68c8 100%);
+    transform: scale(1.1);
+}
+
+.circular-progress::before {
+    content: "";
+    position: absolute;
+    height: 90%;
+    width: 90%;
+    background-color: #fff;
+    border-radius: 50%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+.value-container {
+    position: relative;
+    font-family: 'Arial', sans-serif;
+    font-size: 16px;
+    color: #f06292;
+    font-weight: 700;
+    text-align: center;
+    padding: 15px;
+    transition: color 0.3s ease;
+}
+
+.value-container:hover {
+    color: #c2185b;
+}
+
+.habit-days {
+    display: flex;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.input-here {
+    border: none;
+    border-bottom: 2px solid #b0bec5;
+    border-radius: 0;
+    font-size: 24px;
+    padding-left: 8px;
+    color: #333;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.input-here:focus {
+    border-bottom-color: #00bcd4;
+    outline: none;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
